@@ -1,2 +1,2 @@
-calendar_date_select
-will_paginate
+calendar_date_select --version 1.16.1 
+will_paginate --version 2.3.12
