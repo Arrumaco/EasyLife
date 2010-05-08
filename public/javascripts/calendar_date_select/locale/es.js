@@ -1,11 +1,11 @@
-Date.weekdays = $w('L Ma Mi J V S D');
-Date.months = $w('Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre');
+Date.weekdays = $w("L M X J V S D");
+Date.months = $w("Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre" );
 
 Date.first_day_of_week = 1;
 
 _translations = {
-  "OK": "OK",
+  "OK": "Cancelar",
   "Now": "Ahora",
-  "Today": "Hoy",
-  "Clear": "Borrar"
+  "Clear": "Limpiar",
+  "Today": "Hoy"
 }
