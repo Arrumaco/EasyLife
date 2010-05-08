@@ -15,11 +15,7 @@
   <%= stylesheet_link_tag 'EasyLife' %>
   <%= stylesheet_link_tag 'FormsButtons' %>
 
-  <%
-    CalendarDateSelect.format = (params[:fmt]||"latin").to_sym
-    params[:style]||="plain"
-    params[:style]=nil if params[:style]=="default"
-  %>
+
 </head>
 <body>
   <div id="content">
