@@ -42,4 +42,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :es
 end
 
-CalendarDateSelect.format = :latin
+CalendarDateSelect.format = :italian
