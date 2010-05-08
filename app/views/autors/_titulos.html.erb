@@ -1,0 +1,27 @@
+<title>Este es el parcial de titulos</title>
+<table class="tope">
+ <tr>
+    <th style="width: 58px;" <%= sort_td_class_helper "titulo_id" %>> <%= sort_link_helper "Id", "titulo_id" %> </th>
+    <th style="width: 58px;" <%= sort_td_class_helper "titulo_autor_id" %>> <%= sort_link_helper "Id Autor", "titulo_autor_id" %> </th>
+    <th style="width: 300px;" <%= sort_td_class_helper "titulo_nombre" %>> <%= sort_link_helper "Nombre", "titulo_nombre" %> </th>
+    <th style="width: 300px;" <%= sort_td_class_helper "titulo_fecha" %>> <%= sort_link_helper "Fecha", "titulo_fecha" %> </th>
+ </tr>
+</table>
+
+<table class="lista";>
+<% @titulos.each do |titulo| %>
+  <tr class="<%= cycle("Impar","Par") %>">
+    <td style="width: 62px;"><%= titulo.id %></td>
+	<td style="width: 62px;"><%= titulo.autor_id %></td>
+    <td style="width: 302px;"><%= titulo.nombre[0,40] %></td>
+    <td style="width: 302px;"><%= titulo.fecha %></td>	
+	<td><%= link_to image_tag("modetail.gif", :mouseover => "modetailmo.gif", :border => 0), titulo %></td>
+    <td><%= link_to image_tag("Select.gif", :mouseover => "Selectmo.gif", :border => 0), edit_titulo_path(titulo) %></td>
+    <td><%= link_to image_tag("Delete.gif", :mouseover => "Deletemo.gif", :border => 0), titulo, :confirm => 'Confirma la operacion?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+ <%= will_paginate @titulos %>
+</br>

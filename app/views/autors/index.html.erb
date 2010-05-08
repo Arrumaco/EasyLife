@@ -1,0 +1,24 @@
+<h1>Tabla Autor</h1>
+<table  frame = "box", width = "500">
+  <tr>
+	<td>
+	<%= link_to image_tag("Add.gif", :mouseover => "Addmo.gif", :border => 0 ), new_autor_path %>
+	<%= link_to image_tag("Cancel.gif", :mouseover => "Cancelmo.gif", :border => 0), new_autor_path %>
+	</td>
+  </tr> 
+</table>
+<br />
+<% form_tag(autors_path, :method => "get") do %>
+  <table>
+	<tr>
+	  <td align=left><%= text_field_tag :nombre, @qbe_index[:nombre], options={ :size=> 10 } %></td>
+      <td align=left><%= text_field_tag :fecha, @qbe_index[:fecha], options={ :size=> 10 } %></td>
+	  <td><%= image_submit_tag "Find.gif", {:id => "BotonFind1"} %></td>
+	</tr>
+  </table>
+<% end %>
+
+<div id="lista">
+  <%= render :partial => "tablas_lista" %>
+</div>
+

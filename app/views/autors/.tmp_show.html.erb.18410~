@@ -1,0 +1,23 @@
+<h1>Verificar Autor</h1>
+<% form_for(@autor) do |f| %>
+  <%= f.error_messages %>
+  <table  frame = "box", width = "500">
+    <tr>
+      <td>
+        <%= link_to image_tag("Select.gif", :mouseover => "Selectmo.gif", :border => 0 ), edit_autor_path(@autor) %>
+        <%= link_to image_tag("Cancel.gif", :mouseover => "Cancelmo.gif", :border => 0), autors_path %>
+      </td>
+    </tr> 
+  </table> 
+  <br /> 
+  <table> 
+    <tr> <td width=150, align=left>ID </td> <td><%= @autor.id %></td> </tr>
+    <tr> <td width=150, align=left>Nombre </td> <td><%= @autor.nombre %></td> </tr>
+    <tr> <td width=150, align=left>Fecha </td> <td><%= @autor.fecha %></td> </tr>
+  </table>
+  <div id="titulos">
+    <br>
+  	<%= render :partial => "show_titulo" %>
+	<br>
+  </div>
+<% end %>
