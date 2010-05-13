@@ -10,9 +10,14 @@
     </tr> 
   </table> 
   <br /> 
-  <table>  
-    <tr> <td width=150, align=left>Nombre </td> <td><%= f.text_area :nombre, :cols =>20, :rows =>1 %></td> </tr>
-<!--    <tr> <td>Nombre Accion</td> <td><%= f.text_field :nombre,:size => 50 %></td> </tr>  -->
-    <tr> <td>Fecha Ingreso</td> <td><%= f.calendar_date_select :fecha, :popup => "force" %></td> </tr> 
+  <table>   
+    <tr> 
+	  <td width=150, align=left>Nombre </td> 
+	  <td><%= text_field_with_auto_complete :autor, :nombre, { :size => 50 } %></td> 
+	</tr>
+    <tr> 
+	  <td>Fecha Ingreso</td> 
+	  <td><%= f.calendar_date_select :fecha, :popup => "force" %></td> 
+	</tr> 
   </table>
 <% end %>

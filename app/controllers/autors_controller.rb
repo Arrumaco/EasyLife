@@ -1,5 +1,4 @@
 class AutorsController < ApplicationController
-
     before_filter :localize_date, :only => [:update, :create ]
     def localize_date
       params[:autor][:fecha].gsub!(/[.\/]/,'-')
@@ -141,4 +140,10 @@ class AutorsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def auto_complete_for_autor_nombre
+    @autors = Autor.find(:all, :conditions=> "nombre like "+ "'"+ params[:autor] [:nombre] + "%'")
+    render :inline => "<%= auto_complete_result @autors, :nombre %>"
+  end  
+ 
 end
