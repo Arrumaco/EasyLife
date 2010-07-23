@@ -1,2 +1,3 @@
 calendar_date_select --version 1.16.1 
 will_paginate --version 2.3.12
+prawn --version 0.8.4

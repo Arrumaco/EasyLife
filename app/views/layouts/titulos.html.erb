@@ -21,8 +21,9 @@
   %>
 </head>
 <body>
-  <div id="content">
-    <%= @content_for_layout %>
+  <%= render :partial =>"layouts/menu" %>
+  <div id="main">
+    <%= yield :layout %>
   </div>
 </body>
 </html>

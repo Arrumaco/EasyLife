@@ -4,6 +4,9 @@
 	<td>
 	<%= link_to image_tag("Add.gif", :mouseover => "Addmo.gif", :border => 0 ), new_autor_path %>
 	<%= link_to image_tag("Cancel.gif", :mouseover => "Cancelmo.gif", :border => 0), new_autor_path %>
+	<%= link_to image_tag("right.gif", :mouseover => "rightmo.gif", :border => 0), 
+                          { :controller => "reportes", :action => "catalogo", :format => 'pdf' },
+                           :popup => true %>
 	</td>
   </tr> 
 </table>
@@ -22,3 +25,6 @@
   <%= render :partial => "tablas_lista" %>
 </div>
 
+<div id="borrar">
+	<p> "Deseas de verdad borrar esto?" </p>
+</div>

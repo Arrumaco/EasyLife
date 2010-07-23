@@ -1,9 +1,5 @@
 class TitulosController < ApplicationController
 
-    before_filter :localize_date, :only => [:update, :create ]
-    def localize_date
-      params[:titulo][:fecha].gsub!(/[.\/]/,'-')
-    end
 	
   # GET /titulos
   # GET /titulos.xml

@@ -1,9 +1,6 @@
+
 class AutorsController < ApplicationController
-    before_filter :localize_date, :only => [:update, :create ]
-    def localize_date
-      params[:autor][:fecha].gsub!(/[.\/]/,'-')
-    end
-	
+  
   # GET /autors
   # GET /autors.xml
   def index
@@ -48,6 +45,7 @@ class AutorsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @autors }
+      format.pdf { render :layout => false } 
     end
   end
 
@@ -72,10 +70,10 @@ class AutorsController < ApplicationController
     session[:id] = params[:id]
     @titulo.autor_id = session[:id]
     
-
     respond_to do |format|
-      format.html # show.html.erb
+      format.html  # show.html.erb
       format.xml  { render :xml => @autor }
+      format.pdf { render :layout => false }
     end
   end
 
@@ -142,8 +140,8 @@ class AutorsController < ApplicationController
   end
   
   def auto_complete_for_autor_nombre
-    @autors = Autor.find(:all, :conditions=> "nombre like "+ "'"+ params[:autor] [:nombre] + "%'")
+    @autors = Autor.find(:all, :conditions=> "nombre like "+ "'"+ params[:autor] [:nombre] + "%'"+ " or  nombre like "+ "'"+ params[:autor] [:nombre].capitalize + "%'" )
     render :inline => "<%= auto_complete_result @autors, :nombre %>"
   end  
- 
+  
 end

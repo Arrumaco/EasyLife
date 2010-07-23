@@ -1,10 +1,10 @@
   body
    {
     border: 1px outset;
-	margin-left: 1em; 
-	margin-right: 1em;
-	margin-top: 1em; 
-	margin-bottom: 1em; 
+	margin-left: 0.3em; 
+	margin-right: 0.3em;
+	margin-top: 0.3em; 
+	margin-bottom: 0.3em; 
 	font-family: Arial, sans-serif;
     background-color: #ffff99;
    }
@@ -142,3 +142,64 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+/* Styles for main page */
+
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+}
+
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #141;
+}
+
+#main {
+  margin-left: 13em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+/* END:mainlayout */
+
+/* Estilos para el menu lateral y sus opciones */
+
+#opcion_menu.contenido {
+  border: 0px solid #D6D1B9;
+  padding: 0px;  }
+  #opcion_menu.contenido #navigation {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+	width: 12em;
+	background-color: #D6D1B9;
+	float: left;}
+    #opcion_menu.contenido #navigation ul {
+	  padding-left: 20px; }
+    #opcion_menu.contenido #navigation a {
+      text-decoration: none;
+      color: #7f7669; }
+      #opcion_menu.contenido #navigation a:hover, #opcion_menu.contenido #navigation a:active {
+        text-decoration: inherit; 
+		color: black; 
+		background-color: #D6D1B9; }
+    #opcion_menu.contenido #navigation li {
+      border: medium none;
+      list-style-image: none;
+      list-style-type: none;
+      padding: 2px; }
+      #opcion_menu.contenido #navigation li a.selected {
+        color: #4c4338;
+        text-decoration: underline; }
+      #opcion_menu.contenido #navigation li li {
+        font-size: 10pt; }
+/* FIN de Estilos para las opciones de menu */
